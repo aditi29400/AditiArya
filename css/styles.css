@@ -1,0 +1,383 @@
+/* Global styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Header styles */
+header {
+    background-color: #031974;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 120px;
+    height: 50px;
+    margin-left: 2em;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 1.8em;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main content styles */
+main {
+    padding-top: 80px;
+}
+
+.section {
+    padding: 2em;
+    position: relative;
+}
+
+.section h2 {
+    margin-top: 2em;
+    margin-left: 3em;
+      color: #3ad6d8;
+        font-size: 3em;
+}
+
+.section h2.center-text {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 2em;
+
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-container p{
+  width: 400px;
+  height: 280px;
+   word-spacing: 5px;
+   line-height: 1.5;
+   font-weight: bold;
+}
+.about-container p1{
+  color: #0bfb0a;
+}
+.about-container p2{
+  color: #e52edd;
+}
+.about-container p3{
+  color: #f4f85e;
+}
+.about-container p,
+.about-container img {
+    margin: 0.5em;
+
+}
+.experience-list p1{
+    color: #0bfb0a;
+}
+.experience-list p2{
+    color: #e52edd;
+}
+.experience-list p3{
+    color: #f4f85e;
+}
+
+.about-container img {
+    width: 300px;
+    height: 320px;
+    border-radius: 30%;
+}
+
+button {
+    display: block;
+    margin: 1em 7em;
+    padding: 1em 1em;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: navy;
+}
+
+.education-list,
+.skills-list,
+.experience-list,
+.project-list,
+.certification-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.education-item,
+.skill-item,
+.experience-item,
+.project-item,
+.certification-item {
+    background-color: #222;
+    padding: 1em;
+    border-radius: 8px;
+    flex: 1 1 calc(25% - 2em);
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden; /* Ensure images don't overflow */
+    position: relative; /* For animation */
+}
+
+.skill-item img {
+    width: 100px;
+    height: 100px;
+    transition: transform 5s ease-out; /* Smooth animation */
+}
+.skill-item:hover .skill-name {
+    display: flex;
+    transform: translateY(-100%);
+}
+
+.skill-item {
+    position: relative;
+}
+
+.skill-name {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 30%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.skill-item:hover .skill-name {
+    display: flex;
+}
+
+.certification-item {
+    position: relative;
+}
+
+.certification-description {
+  display: contents;
+    bottom: 0;
+    left: 0;
+    width: 1500%;
+    height: 1500%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.5s ease-out; /* Smooth animation */
+}
+
+.certification-item:hover {
+    display: block;
+        transform: scale(1.05);
+}
+
+.certification-item img {
+  width: 350px;
+  height: 250px;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
+footer {
+    background-color: #031974;
+    padding: 1em;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quote{
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-stretch: ultra-expanded;
+  font-size: 28px;
+}
+
+
+.social-media img {
+    width: 40px;
+    height: 40px;
+    margin: 0.5em;
+    margin-left: 3em;
+}
+
+/* Parallax effect */
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax-bg {
+    background-image: url('assest/bg.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translateZ(0);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 2.5s ease-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 2.5s ease-out;
+}
+
+@media (max-width: 768px) {
+    .education-item,
+    .skill-item,
+    .experience-item,
+    .project-item,
+    .certification-item {
+        flex: 1 1 calc(50% - 2em);
+    }
+}
+
+@media (max-width: 480px) {
+    .education-item,
+    .skill-item,
+    .experience-item,
+    .project-item,
+    .certification-item {
+        flex: 1 1 100%;
+    }
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 600px;
+    margin-top: 3em;
+    margin-left: 25em;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    margin-left: 1em;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 2em;
+}
+
+.contact-form button {
+    width: 50%;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.project-item a{
+  color: #fff;
+}
+.project-item a:hover {
+    color: #ffcc00;
+
+}
